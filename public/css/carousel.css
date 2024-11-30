@@ -1,0 +1,139 @@
+.carousel-container {
+    background-color: #cecece; 
+    padding: 15px;
+}
+
+.carousel-subtitle {
+    text-align: center;
+    color: #0056b3;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.carousel-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    padding: 0%;
+    margin: 0;
+}
+
+.carousel-slide {
+    min-width: 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    color: rgb(245, 245, 245);
+    padding-bottom: 50px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.n1 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(246, 123, 123, 0.5);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.n2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(246, 123, 123, 0.5);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.n3 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(246, 123, 123, 0.5);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.n4 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(246, 123, 123, 0.5);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.n5 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(246, 123, 123, 0.5);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.carousel-button {
+    background-color: rgba(134, 134, 134, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 100%;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.carousel-button:focus {
+    outline: none;
+}

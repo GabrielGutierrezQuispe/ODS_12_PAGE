@@ -1,0 +1,72 @@
+/* Estilos para la sección que estás solicitando */
+.contenedor {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.container_imagen {
+    flex: 1;
+    position: relative;
+    max-width: 350px;
+    max-height: 470px;
+}
+
+.cuadro {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #001f54;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.texto-derecha {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.title_ods {
+    font-size: 24px;
+    font-weight: bold;
+    color: #001f54;
+    margin-bottom: 20px;
+}
+
+.txt_objetivos {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    column-count: 2;
+    column-gap: 30px;
+}
+
+
+/* Responsive  */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container_imagen, .texto-derecha {
+        width: 100%;
+        padding: 16px;
+    }
+    .texto-derecha .title_ods {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .txt_objetivos {
+        font-size: 14px;
+        column-count: 1;
+    }
+}
+
