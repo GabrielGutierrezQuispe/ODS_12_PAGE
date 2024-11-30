@@ -1,0 +1,786 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+
+body {
+    font-family: "Inika", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* HEADER*/
+header {
+    background-color: #ecb023;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#btnDarkMode {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 46px; 
+    right: 30px;
+}
+
+#darkModeIcon {
+    color: white;
+    font-size: 24px;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 22px;
+    margin-left: 10px;
+    font-weight: 500;
+    margin-right: 120px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px;
+    transition: color 0.3s;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+/* BODY */
+
+/* Quienes somos */  
+.quienes-somos {  
+    display: flex;  
+    flex-direction: row;  
+    align-items: center; 
+    padding: 30px;  
+    background-color: #ffffff;  
+    margin: 20px 0;  
+    gap: 40px;
+    opacity: 0;
+    animation: slideIn 1s forwards; 
+}  
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%); 
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+
+.quienes-somos .texto {
+    margin-right: 200px;   
+    display: flex;  
+    flex-direction: column;  
+    align-items: flex-start;  
+    flex: 1;  
+    opacity: 0; 
+    animation: slideText 1s ease-out 0.5s forwards; 
+}  
+
+@keyframes slideText {
+    from {
+        opacity: 0;
+        transform: translateX(-100%); 
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.quienes-somos h2 { 
+    margin-left: 120px;
+    font-size: 60px;  
+    color: #00695c;  
+    margin-bottom: 15px;  
+    opacity: 0; 
+    animation: slideText 1s ease-out 0.7s forwards; 
+}  
+
+.quienes-somos p {
+    margin-left: 100px;  
+    font-size: 24px;  
+    color: #000000;  
+    line-height: 1.6;  
+    max-width: 90%; 
+    opacity: 0; 
+    animation: slideText 1s ease-out 1s forwards; 
+}  
+
+.quienes-somos .imagen {
+    width: 700px;  
+    height: auto;
+    opacity: 0; 
+    animation: slideImage 1s ease-out 1.5s forwards; 
+}  
+
+.quienes-somos img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 120px;
+    margin-left: -100px;  
+    border-radius: 50%;  
+    transition: transform 0.3s;  
+}  
+
+@keyframes slideImage {
+    from {
+        opacity: 0;
+        transform: translateY(100%); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.quienes-somos img:hover {  
+    transform: scale(1.1);  
+}
+
+hr {
+    border: none;   
+    height: 2px;   
+    background-color: #9c9c9cef;   
+    margin: 40px 300px; 
+}
+
+/* Misión y Visión */  
+.container {  
+    margin: 40px;
+    margin-top: 40px;  
+    display: flex;   
+    align-items: stretch;   
+    margin-bottom: 40px;  
+    padding-bottom: 20px; 
+    opacity: 0; 
+    animation: slideInContainer 1s forwards;
+}  
+
+@keyframes slideInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(100%); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.linea-vertical {  
+    width: 4px;  
+    background-color: #9c9c9cef;   
+    margin: 120px 120px;  
+}  
+
+.mision, .vision {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    text-align: center;  
+    width: 45%;  
+    opacity: 0; 
+}  
+
+@keyframes slideMision {
+    from {
+        opacity: 0;
+        transform: translateY(-100%); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+@keyframes slideVision {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.mision {
+    animation: slideMision 1s ease-out forwards;
+    animation-delay: 0.5s; 
+}
+
+.vision {
+    animation: slideVision 1s ease-out forwards;
+    animation-delay: 1s; 
+}
+
+.icono img {  
+    margin-top: 20px;  
+    width: 160px;   
+    height: auto;  
+    margin-bottom: -10px;  
+}  
+
+#title-mision {  
+    color: #b96300ef;  
+    font-weight: 200;  
+}  
+
+#title-vision {  
+    color: #004ff8ef;  
+    font-weight: 200;  
+}  
+
+.title-historia {  
+    font-size: 60px;   
+    color: #b1004aef;   
+    margin: 10px 0;  
+}  
+
+#title-mision{
+    margin-bottom: 0;
+    font-size: 70px;
+}
+
+#title-vision{
+    margin-bottom: 0;
+    font-size: 70px;
+}
+
+
+.mision p, .vision p {
+    font-size: 24px;   
+    max-width: 800px;   
+    margin: 10 auto;   
+}  
+
+.imagen img {  
+    width: 100%;  
+    max-width: 450px;   
+    height: auto;  
+    border-radius: 30px;   
+    margin-top: 20px;   
+}  
+
+.linea-horizontal {  
+    border: none;   
+    height: 1px;   
+    background-color: #9c9c9cef;   
+    margin: 80px 300px;   
+}  
+
+.quienes-somos, .mision, .vision {
+    width: 100%; 
+}
+
+/* Historia */
+
+.historia-contenido {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+    gap: 70px;  
+    margin: 20px auto; 
+    padding: 0px; 
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+
+.historia-content {
+    width: 600px; 
+}
+
+.historia-contenido img {  
+    width: 350px;  
+    max-height: 500px;  
+    border-radius: 30px; 
+}
+
+.historia-contenido h2 { 
+    font-size: 70px; 
+    margin: 0 auto; 
+    text-align: center;
+    font-weight: 200; 
+}
+
+.historia-contenido p {
+    font-size: 24px; 
+    line-height: 1.5;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 700px; 
+}
+
+.linea-horizontal2 {  
+    border: none; 
+    height: 1px; 
+    background-color: #9c9c9cef; 
+    margin: 80px auto; 
+    width: 90%;
+}
+
+/* Valores */
+.section.valores {  
+    text-align: center; 
+    padding: 40px;  
+    background-color: #ffffff;  
+}  
+
+h2 {
+    margin-top: 0;  
+    font-size: 70px; 
+    font-weight: 200;  
+    color: #d1a100;
+    margin-bottom: 120px; 
+}  
+
+.valores-grid {  
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
+}  
+
+.valor-item {  
+    text-align: center; 
+    opacity: 0;
+    transform: translateX(-100%); 
+    animation: slideInLeft 0.8s ease-out forwards;
+}  
+
+.valor-item img {  
+    width: 250px; 
+    height: 250px; 
+    border-radius: 70px; 
+    margin-bottom: 0px; 
+    transform: translateY(-100px);  
+    animation: bounceFromTop 1s ease forwards;  
+}  
+
+.valor-item h3 {  
+    font-size: 38px; 
+    font-weight: 100; 
+    margin-top: 10px;  
+}
+
+@keyframes bounceFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    70% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);  
+    }
+}
+
+@media (max-width: 768px) {
+    .valores-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* FOOTER */
+.footer {
+    position: relative;
+    width: 100%;
+    background: #1c1f23;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+  }
+  
+  .icon-elem {
+    list-style: none;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+  }
+  
+  .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .menu-elem {
+    list-style: none;
+  }
+  .menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  
+  .menu-icon:hover {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  
+  .hamburger-icon {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--white); 
+  }
+  
+  .hamburger-icon {
+    display: block; 
+  }
+  
+  .dark-mode-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--white); 
+  }
+  
+  .dark-mode-btn i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .darkmode .dark-mode-btn {
+    color: var(--white);
+  }
+
+/* DARKMODE */
+body.dark-mode {  
+    background-color: #000000;  
+    color: #ffffff; 
+}  
+
+
+
+nav ul li a.dark-mode {  
+    color: #ffffff;  
+}  
+
+nav ul li a.dark-mode:hover {  
+    color: #ff4d4d;
+}  
+
+.container.dark-mode,   
+.historia-contenido.dark-mode {  
+    background-color: #070707;  
+    color: #ffffff; 
+}
+
+
+.linea-vertical.dark-mode {  
+    background-color: #ffffff; 
+}  
+
+#title-mision.dark-mode {  
+    color: #ffcc00;   
+}  
+
+#title-vision.dark-mode {  
+    color: #66b3ff; 
+}  
+
+.title-historia.dark-mode {  
+    color: #ffffff; 
+}  
+
+.mision p.dark-mode,   
+.vision p.dark-mode,   
+.historia-contenido p.dark-mode {  
+    color: #ffffff; 
+}  
+
+.linea-horizontal.dark-mode,   
+.linea-horizontal2.dark-mode {  
+    background-color: #ffffff; 
+}  
+
+.section.valores.dark-mode {
+    background-color: #080808;
+    color: #ffffff; 
+}
+
+.section.valores.dark-mode h2,
+.section.valores.dark-mode h3 {
+    color: #ffffff; 
+}
+
+.section.valores.dark-mode img {
+    opacity: 0.8;
+}
+
+.header button{
+    margin-right: 16px ;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background-color: #D4A017;
+    transition: background-color 0.3s ease-in;
+}
+
+.header button:hover {
+    background-color: #f3ce71;
+}
+
+.dark-mode .quienes-somos {
+    background-color: #080808; 
+}
+
+.dark-mode .quienes-somos h2 {
+    color: #086400; 
+}
+
+.dark-mode .quienes-somos p {
+    color: #ffffff; 
+}
+
+.dark-mode .quienes-somos img {
+    filter: brightness(0.8); 
+}
+
+
+
+
+@media (max-width: 390px) {
+    /* General */
+    .container {
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+    }
+
+        /* Quienes Somos */
+    @media (max-width: 468px) {
+        .quienes-somos {  
+            width: 100%;
+            margin: 0 auto;
+            margin-right: 120px;
+            align-items: center;  
+            justify-content: center;  
+            flex-direction: column;  
+            text-align: center;
+        }  
+    
+        .quienes-somos .texto {
+            margin-left: 120px;
+            width: 100%;
+            align-items: center; 
+        }
+    
+        .quienes-somos h2 { 
+            width: 100%;
+            margin-right: 90px;
+            font-size: 36px; 
+        }  
+    
+        .quienes-somos p {
+            margin-right: 70px;
+            font-size: 16px; 
+            line-height: 1.4;  
+            max-width: 90%; 
+        }  
+    
+        .quienes-somos .imagen {
+            width: 100%;  
+            max-width: 300px; 
+            margin-right: 70px;
+        }  
+    
+        .quienes-somos img {
+            max-width: 90%; 
+            margin: 0 auto; 
+        }
+    }
+
+    /* Misión y Visión */
+
+    .mision, .vision {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .mision p, .vision p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0 10px;
+    }
+
+    .icono img {
+        width: 100px;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    #title-mision, #title-vision {
+        font-size: 36px;
+        margin: 10px 0;
+    }
+
+    .imagen img {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+        margin: 10px auto;
+    }
+
+    .linea-vertical {
+        display: none;
+    }
+
+    /* Historia */
+
+    @media (max-width: 768px) {
+        .historia-contenido {
+            flex-direction: column; 
+            gap: 20px;
+        }
+    
+        .historia-content {
+            width: 100%; 
+        }
+    
+        .historia-contenido img {
+            max-width: 250px; 
+            max-height: 400px;
+            border-radius: 15px;
+        }
+    
+        .historia-contenido h2 {
+            font-size: 36px; 
+        }
+    
+        .historia-contenido p {
+            font-size: 16px; 
+            max-width: 90%; 
+            margin: 10px auto;
+        }
+    }
+
+    /* Valores */
+
+    .section.valores {
+        padding: 20px;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .valor-item {
+        text-align: center;
+    }
+
+    .valor-item img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .section.valores h2 {
+        font-size: 36px; 
+    }
+
+    .valor-item h3 {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    h2.title-valores {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,369 @@
+/*===================== Video ods12 ====================*/
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.capa-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bienvenida {
+  position: relative;
+  top: 60%;
+  left: 5%;
+}
+
+.bienvenida h2 {
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.bienvenida h2 span {
+  font-size: 2.0em;
+  font-weight: 600;
+}
+
+.animated-text {
+  position: relative;
+  height: 70px;
+  overflow: hidden;
+}
+
+.animated-text h3 {
+  color: #F5B400;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 1px;
+}
+
+.animated-text h3:nth-child(1) {
+  animation: text-move 5s infinite;
+}
+
+@keyframes text-move {
+  0% {
+      margin-top: 0;
+  }
+
+  25% {
+      margin-top: -70px;
+  }
+
+  50% {
+      margin-top: -140px;
+  }
+
+  75% {
+      margin-top: -70px;
+  }
+
+  100% {
+      margin-top: 0;
+  }
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 900px) {
+  .bienvenida h2 {
+      font-size: 2em;
+      /* Reduce el tamaño de las fuentes */
+  }
+
+  .bienvenida h2 span {
+      font-size: 2.2em;
+  }
+
+  .animated-text h3 {
+      font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bienvenida h2 {
+      font-size: 1.8em;
+  }
+
+  .bienvenida h2 span {
+      font-size: 2em;
+  }
+
+  .animated-text h3 {
+      font-size: 1.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-content h1::after {
+      width: 80px;
+  }
+}
+
+/*================== Barra de Menu  ======================*/
+header {
+  z-index: 999;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 4px 80px;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease;
+
+}
+
+header.sticky {
+  background: #ecb023;
+  padding: 4px 80px;
+}
+
+.brand h3 {
+  position: relative;
+  float: left;
+  color: #fff;
+  top: 4px;
+  font-size: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.brand .ugarte {
+  position: relative;
+  top: -1px;
+}
+
+.brand img {
+  position: relative;
+  float: left;
+  height: 50px;
+  top: 1px;
+  margin-left: -50px;
+}
+
+header .navigation {
+  position: relative;
+}
+
+header .navigation a {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+header .navigation a:hover {
+  color: #3a6cf4;
+}
+
+header.sticky .navigation a:hover {
+  color: #000;
+}
+
+@media (max-width: 1040px) {
+  header {
+      padding: 12px 20px;
+  }
+
+  header.sticky {
+      padding: 10px 20px;
+  }
+
+  header .navigation {
+      display: none;
+  }
+
+  header .navigation.active {
+      z-index: 888;
+      position: fixed;
+      background: #fff;
+      top: 0;
+      right: 0;
+      width: 380px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+      transition: 0.3s ease;
+  }
+
+  header .navigation a {
+      color: #000;
+      font-size: 1.2em;
+      margin: 10px;
+      padding: 0 20px;
+      border-radius: 20px;
+  }
+
+  header .navigation a:hover {
+      background: #3a6cf4;
+      color: #fff;
+      transition: 0.3s ease;
+  }
+
+  .menu-btn {
+      position: absolute;
+      background: url(/icons/menu.png)no-repeat;
+      background-size: 30px;
+      background-position: center;
+      width: 40px;
+      height: 40px;
+      right: 0;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+  }
+
+  .menu-btn.active {
+      z-index: 999;
+      background: url(/icons/close.png)no-repeat;
+      background-size: 25px;
+      background-position: center;
+      transition: 0.3s ease;
+      filter: invert(1);
+  }
+
+  .brand img {
+      margin-left: 10px;
+  }
+
+  .brand h3 {
+      margin-left: 5px;
+  }
+}
+
+/* dark */
+.dark-theme {
+  --search-text: #18191A;
+  --letra-blanca: #fff;
+}
+
+#icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+#ods12-intro .contenedor {
+  margin-top: 100vh; /* Mueve esta sección debajo del video */
+}
+
+/* FOOTER */
+.footer {
+  position: relative;
+  width: 100%;
+  background: #1c1f23;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 5px;
+  flex-wrap: wrap;
+}
+
+.icon-elem {
+  list-style: none;
+}
+
+.icon {
+  color: white;
+  font-size: 32px;
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.menu-elem {
+  list-style: none;
+}
+.menu-icon {
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+
+.hamburger-icon {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--white); 
+}
+
+.hamburger-icon {
+  display: block; 
+}
+
+.dark-mode-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--white); 
+}
+
+.dark-mode-btn i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.darkmode .dark-mode-btn {
+  color: var(--white);
+}
